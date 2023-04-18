@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentInicial">
+    <fragment
+        android:id="@+id/fragmentInicial"
+        android:name="com.example.trabalhog1.FragmentInicial"
+        android:label="fragment_inicial"
+        tools:layout="@layout/fragment_inicial" >
+        <action
+            android:id="@+id/action_fragmentInicial_to_fragmentLista"
+            app:destination="@id/fragmentLista" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLista"
+        android:name="com.example.trabalhog1.FragmentLista"
+        android:label="fragment_lista"
+        tools:layout="@layout/fragment_lista" >
+        <action
+            android:id="@+id/action_fragmentLista_to_fragmentPokemonsDetalhes"
+            app:destination="@id/fragmentPokemonsDetalhes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPokemonsDetalhes"
+        android:name="com.example.trabalhog1.FragmentPokemonsDetalhes"
+        android:label="fragment_pokemons_detalhes"
+        tools:layout="@layout/fragment_pokemons_detalhes" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
